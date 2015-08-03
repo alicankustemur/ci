@@ -5,7 +5,10 @@
 	<title><?php echo $title; ?></title>
 </head>
 <body>
-	<?php echo $content; ?>
+	<?php 
+		echo $content; 
+		echo $this->input->cookie("name_cookie");
+	?>
 	
 	<form action="index.php/newproject/control" method="POST">
 		<input type="text" name="word"/>

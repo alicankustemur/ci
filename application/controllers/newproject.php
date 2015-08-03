@@ -6,7 +6,21 @@ class NewProject extends CI_Controller{
 	public function index(){
 		$data['title'] = 'Hello Codeigniter';
 		$data['content'] = 'My first codeigniter application';
+		
+		$array = array(
+			
+			"name" => "name_cookie",
+			"value"=> "Ali Can Kuştemur",
+			"expire"=> 20
+			
+		);
+		$this->input->set_cookie($array);
+		
+		//$this->input->set_cookie("name_cookie","Ali Can Kuştemur","");
+		
 		$this->load->view("new_project_view",$data);
+		
+	
 	}
 	
 	public function control(){
