@@ -23,6 +23,11 @@ class NewProject extends CI_Controller{
 	
 	}
 	
+	public function members(){
+		$this->load->model("new_project_model");
+		$this->new_project_model->members();
+	}
+	
 	public function control(){
 		if($_POST){
 			
